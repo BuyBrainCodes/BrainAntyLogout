@@ -1,0 +1,8 @@
+main: xyz.dwaslashe.antylogout.Main
+name: BrainAntyLogout
+version: 1.0.0
+author: [dwaslashe]
+website: buybrain.pl
+api-version: 1.13
+depend:
+  - WorldGuard
