@@ -8,6 +8,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import xyz.dwaslashe.antylogout.configs.PluginConfig;
 import xyz.dwaslashe.antylogout.listeners.PlayerCombatListener;
+import xyz.dwaslashe.antylogout.utils.LicenseApi;
 
 import java.io.File;
 
@@ -40,6 +41,8 @@ public class Main extends JavaPlugin {
         });
 
         pluginConfig.load();
+
+        if (!new LicenseApi(pluginConfig.getCore().getLicense(), "https://buybrain.pl/license/verify.php", this).register()) return;
 
         Bukkit.getPluginManager().registerEvents(new PlayerCombatListener(), this);
     }

@@ -21,6 +21,17 @@ public class PluginConfig extends OkaeriConfig {
 
     private Antylogout antylogout = new Antylogout();
     private Flags flags = new Flags();
+    private Core core = new Core();
+
+    //Core
+    @Getter @Setter
+    @Names(strategy = NameStrategy.HYPHEN_CASE, modifier = NameModifier.TO_LOWER_CASE)
+    public static class Core extends OkaeriConfig {
+
+        @Comment("Your license:")
+        private String license = "";
+
+    }
 
     //Flags
     @Getter @Setter
